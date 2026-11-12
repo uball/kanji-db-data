@@ -88,13 +88,11 @@ commitには `auto:` か `Co-Authored-By:` を付ける。署名が無いとAI�
 - ライセンスは CC BY-SA 4.0(`LICENSE`)。出典ごとの帰属表示は `ATTRIBUTION.md`。
   **サイトへのリンクは「お願い」で、条件として書かないこと**(条件を足すとライセンス違反になる)。
 
-<!-- TODO: 何を作るものか、誰が使うか、他リポジトリとの関係を数行で -->
 
 ## デプロイ済み環境
 
 なし(公開リポジトリそのものが配布物。2026-11-12 に cost の `new-repo.yml` で作成、公開)。
 
-<!-- TODO: 公開URL / Worker名 / D1・R2・KV の名前とID / アカウント -->
 
 ## 認証情報の在り処
 
@@ -109,7 +107,6 @@ export CLOUDFLARE_API_TOKEN=$(grep '^CLOUDFLARE_API_TOKEN=' ../cost/.env | cut -
 ただし認証処理やdeploy周辺を次に触るときは、`cost/.env` 優先へ自然に寄せる。
 詳細は `uball/cost/docs/playbook/credentials.md`。
 
-<!-- TODO: Cloudflare以外のプロジェクト固有tokenがあれば、正本の場所だけ追記する -->
 
 ## 開発とデプロイの手順
 
@@ -121,8 +118,6 @@ bash scripts/sync-from-kanji.sh ../kanji   # 冪等。kanji 側 index.json の s
 
 件数が変わったら `README.md` の表(英日2か所)も直す。
 
-<!-- TODO: ローカル起動 / テスト / ビルド / デプロイ の実際のコマンド。
-     順序に意味がある箇所(先にフロントをビルド、等)は理由を添える -->
 
 ## リポジトリ固有の知見
 
