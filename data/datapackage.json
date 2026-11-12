@@ -1,0 +1,71 @@
+{
+  "profile": "tabular-data-package",
+  "name": "kanji-db-derived-data",
+  "title": "Kanji Database derived datasets",
+  "description": "Datasets derived by kanji-db.com by cross-referencing its licensed source data.",
+  "homepage": "https://kanji-db.com/data",
+  "created": "2026-09-13",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "title": "Creative Commons Attribution-ShareAlike 4.0 International"
+    }
+  ],
+  "resources": [
+    {
+      "name": "similar-kanji",
+      "path": "similar-kanji.tsv",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "rows": 22331,
+      "bytes": 380976,
+      "hash": "sha256:50dfff2c178e6ca2195e48e3c997007910c256c09f97b6ba24574be0f468e3f9"
+    },
+    {
+      "name": "phonetic-series",
+      "path": "phonetic-series.tsv",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "rows": 5743,
+      "bytes": 84910,
+      "hash": "sha256:74ba093c2824cca3d9b7e6e329f925c6d8f7026179453a33a96dcc614e3f5056"
+    },
+    {
+      "name": "kunyomi-groups",
+      "path": "kunyomi-groups.tsv",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "rows": 291,
+      "bytes": 7653,
+      "hash": "sha256:fffaa4679075159be74de8b39f483d01041d74c6d442b40366430ec697ecdec2"
+    },
+    {
+      "name": "homophone-groups",
+      "path": "homophone-groups.tsv",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "rows": 1275,
+      "bytes": 39830,
+      "hash": "sha256:2a36905c67faf8a655ea4ced07836f86d1bced244f89b9fa5ffc82466e51567d"
+    },
+    {
+      "name": "antonyms",
+      "path": "antonyms.tsv",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "rows": 555,
+      "bytes": 26098,
+      "hash": "sha256:a399a2dbc5aa05ecf8876549cf0685bb6ce70561a5be7431cd45a70b6b8499ff"
+    },
+    {
+      "name": "unlisted-variants",
+      "path": "unlisted-variants.tsv",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values",
+      "rows": 831,
+      "bytes": 14221,
+      "hash": "sha256:4e6ead6676454172fc5743cc553e12a3a3de93cb47df8c5e5eda3eb75b39f87e"
+    }
+  ]
+}

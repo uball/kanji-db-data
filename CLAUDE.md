@@ -78,9 +78,21 @@ commitには `auto:` か `Co-Authored-By:` を付ける。署名が無いとAI�
 
 ## プロジェクト概要
 
+[kanji-db.com](https://kanji-db.com)(本体は `uball/kanji`)が配っている、自前で突き合わせて作ったデータの**公開リポジトリ**。
+目的は**外部からの参照(被リンク)を作ること** — 2026-11-11 時点で Bing の被リンクは0だった
+(`uball/kanji` の `docs/MARKET-STRATEGY-2026-11.md`・`docs/OUTREACH.md`)。
+
+- `data/` … 似ている漢字・音符・同訓異義・同音異義語・対義語・収録外の字の案内(TSV)と `datapackage.json`
+- `kits/` … Anki デッキ・IME 辞書2本
+- **中身は kanji-db.com の `/data` と常に同じファイル。ここで手で直さないこと**(直すのは `uball/kanji` の書き出しスクリプト)。
+- ライセンスは CC BY-SA 4.0(`LICENSE`)。出典ごとの帰属表示は `ATTRIBUTION.md`。
+  **サイトへのリンクは「お願い」で、条件として書かないこと**(条件を足すとライセンス違反になる)。
+
 <!-- TODO: 何を作るものか、誰が使うか、他リポジトリとの関係を数行で -->
 
 ## デプロイ済み環境
+
+なし(公開リポジトリそのものが配布物。2026-11-12 に cost の `new-repo.yml` で作成、公開)。
 
 <!-- TODO: 公開URL / Worker名 / D1・R2・KV の名前とID / アカウント -->
 
@@ -100,6 +112,14 @@ export CLOUDFLARE_API_TOKEN=$(grep '^CLOUDFLARE_API_TOKEN=' ../cost/.env | cut -
 <!-- TODO: Cloudflare以外のプロジェクト固有tokenがあれば、正本の場所だけ追記する -->
 
 ## 開発とデプロイの手順
+
+`uball/kanji` でデータを書き出し直したら(`scripts/export-open-data.mjs` / `export-study-kits.mjs`)、ここへ写す:
+
+```bash
+bash scripts/sync-from-kanji.sh ../kanji   # 冪等。kanji 側 index.json の sha256 と突き合わせ、食い違えば止まる
+```
+
+件数が変わったら `README.md` の表(英日2か所)も直す。
 
 <!-- TODO: ローカル起動 / テスト / ビルド / デプロイ の実際のコマンド。
      順序に意味がある箇所(先にフロントをビルド、等)は理由を添える -->
